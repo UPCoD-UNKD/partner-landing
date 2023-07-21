@@ -1,0 +1,34 @@
+.Header {
+    border-bottom: 1px solid rgba(247, 248, 250, .5);
+    
+    &__wrap {
+        display: flex;
+        margin: 13px 0;
+        justify-content: space-between;
+        color: #A9CF54;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    &__logo {
+        cursor: pointer;
+    }
+
+    &__nav {
+        
+        &-items {
+            display: flex;
+        }
+    
+        &-item {
+            margin-right: 50px;
+            cursor: pointer;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+

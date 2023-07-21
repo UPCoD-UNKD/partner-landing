@@ -1,0 +1,22 @@
+.SliderDots {
+    display: flex;
+    justify-content: center;;
+    padding-bottom: 90px;
+}
+
+.dot {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(226, 250, 173, .5);
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.active {
+        background: #C5FF44;
+    }
+}
