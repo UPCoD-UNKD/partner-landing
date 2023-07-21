@@ -12,8 +12,7 @@ export default function UserCommentCard({name, comment, users, position}) {
     <>
       <div className="UserCommentCard">
         <span className="UserCommentCard__msg">
-          {/* {comment} */}
-          З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.
+          {comment}
         </span>
         <div className="UserCommentCard__users">
           <div className="UserCommentCard__users-current">
