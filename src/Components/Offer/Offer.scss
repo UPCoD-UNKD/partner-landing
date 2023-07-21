@@ -1,0 +1,52 @@
+.Offer {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 520px 300px 214px 196px;
+    background: url('../../assets/img/substract_2.svg') no-repeat;
+    background-position: center;
+
+    &__title {
+        color: #202020;
+        text-transform: uppercase;
+        margin: 0;
+
+        &.fz80 {
+            position: absolute;
+            right: 397px;
+            top: 97px;
+            font-size: 80px;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+        &.green {
+            position: absolute;
+            top: 240px;
+            left: 233px;
+            color: #669005;
+            font-size: 124px;
+
+            img {
+                margin-left: 37px;
+            }
+        }
+
+        &.black {
+            position: absolute;
+            left: 177px;
+            bottom: 216px;
+            color: #25281E;
+            font-size: 84px;
+
+            img {
+                margin-left: 32px;
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import substract from './../../assets/img/subtract.svg'
 import done from './../../assets/img/done.svg'
 import submit from './../../assets/img/right_arrow.svg'
 import CommentsBlock from '../ComentsBlock/CommentsBlock'
+import Offer from '../Offer/Offer'
 
 export default function main() {
 
@@ -41,7 +42,7 @@ export default function main() {
         user={''}
         position={'Маркетолог'}
       />
-
+      <Offer />
     </main>
   )
 }
