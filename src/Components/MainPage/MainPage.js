@@ -2,12 +2,13 @@ import React from 'react'
 import Input from '../../Common/Input/Input'
 import SectionTemplate from '../../Common/SectionTemplate/SectionTemplate'
 import UserCommentCard from '../../Common/UserCommentCard/UserCommentCard'
-import Offer from '../Offer/Offer'
+import OfferBanner from '../OfferBanner/OfferBanner'
 
 import './MainPage.scss'
 import substract from './../../assets/img/subtract.svg'
 import done from './../../assets/img/done.svg'
 import submit from './../../assets/img/right_arrow.svg'
+import Info from '../Info/Info'
 
 export default function main() {
 
@@ -49,7 +50,12 @@ export default function main() {
         />}
         title={'Наші бізнес партнери говорять'}
       />
-      <Offer />
+      <OfferBanner />
+
+      <SectionTemplate 
+        component={[<Info />, <Info />, <Info />]}
+        title={'Як це працює'}
+      />
     </main>
   )
 }

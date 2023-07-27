@@ -18,4 +18,9 @@
         background-color: rgba(247, 248, 250, .5);
         margin-bottom: 85px;
     }
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+    }
 }

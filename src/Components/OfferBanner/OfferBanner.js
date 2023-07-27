@@ -1,5 +1,5 @@
 import React from 'react'
-import './Offer.scss'
+import './OfferBanner.scss'
 import stars from '../../assets/img/stars.svg'
 import emoji from '../../assets/img/emoji.svg'
 import progressArrow from '../../assets/img/progress_arrow.svg'

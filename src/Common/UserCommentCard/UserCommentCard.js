@@ -9,8 +9,8 @@ import SliderDots from '../SliderDots/SliderDots'
 
 export default function UserCommentCard({name, comment, users, position}) {
   return (
-    <>
-      <div className="UserCommentCard">
+    <div className="UserCommentCard">
+      <div className="UserCommentCard__inner">
         <span className="UserCommentCard__msg">
           {comment}
         </span>
@@ -42,6 +42,6 @@ export default function UserCommentCard({name, comment, users, position}) {
         </div>
       </div>
       <SliderDots />
-    </>
+    </div>
   )
 }

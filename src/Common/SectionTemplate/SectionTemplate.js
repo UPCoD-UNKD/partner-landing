@@ -10,7 +10,11 @@ export default function SectionTemplate({component, title}) {
         </h3>
       </div>
       <div className="hr"></div>
-      {component}
+      <div className="container">
+        <div className="SectionTemplate__inner">
+          {component}
+        </div>
+      </div>
     </div>
   )
 }
