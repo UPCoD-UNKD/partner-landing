@@ -1,0 +1,36 @@
+.Footer {
+    padding: 30px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social {
+        display: flex;
+        list-style: none;
+
+        &-link {
+            margin-right: 30px;
+        }
+
+        &-link:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__conditions {
+
+        &-link {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 80px;
+        }
+
+        &-link:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
