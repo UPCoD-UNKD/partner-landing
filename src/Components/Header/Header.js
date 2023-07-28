@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './Header.scss'
 import logo from '../../assets/img/logo.svg'
 
@@ -7,11 +9,17 @@ export default function Header() {
     <header className='Header'>
       <div className="container">
         <div className="Header__wrap">
-          <img className='Header__logo' src={logo} alt='logo'></img>
+          <Link to={'#'} className='Header__logo'>
+            <img src={logo} alt='logo'></img>
+          </Link>
           <nav className="Header__nav">
             <ul className="Header__nav-items nav">
-              <li className="Header__nav-item">Авторизуватися</li>
-              <li className="Header__nav-item">почати</li>
+              <Link to={'#'} className="Header__nav-item">
+                <li>Авторизуватися</li>
+              </Link>
+              <Link to={'#'} className="Header__nav-item">
+                <li>почати</li>
+              </Link>
             </ul>
           </nav>
         </div>

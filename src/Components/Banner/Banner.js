@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import './Banner.scss'
 import instagram from '../../assets/img/social/instagram.svg';
 import facebook from '../../assets/img/social/facebook.svg';
@@ -21,32 +23,32 @@ export default function Banner() {
               <br/>
             прямо зараз!
             </h1>
-            <a href="#" className="Banner__link">
+            <Link to={'#'} className="Banner__link">
               Отримати партнерку 
-            </a>
+            </Link>
           </div>
           <img src={scrollDown} alt="scroll down" className="Banner__scroll" />
           <nav className="Banner__nav">
             <ul className="Banner__nav-items nav">
               <li className="Banner__nav-item">
-                <a href='#'> 
+                <Link to={'#'}> 
                   <img src={instagram} alt="instagram" />
-                </a>
+                </Link>
               </li>
               <li className="Banner__nav-item">
-                <a href='#'> 
+                <Link to={'#'}> 
                   <img src={facebook} alt="facebook" />
-                </a>
+                </Link>
               </li>
               <li className="Banner__nav-item">
-                <a href='#'> 
+                <Link to={'#'}> 
                   <img src={linkedin} alt="linkedin" />
-                </a>
+                </Link>
               </li>
               <li className="Banner__nav-item">
-                <a href='#'> 
+                <Link to={'#'}> 
                   <img src={twitter} alt="twitter" />
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

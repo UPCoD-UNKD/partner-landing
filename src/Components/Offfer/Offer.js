@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Offer.scss'
 
 export default function Offer() {
@@ -14,9 +15,9 @@ export default function Offer() {
             разом з нами
           </h3>
         </div>
-        <a href="#" className="Offer__link">
+        <Link to={'#'} className="Offer__link">
                 Отримати партнерку 
-        </a>
+        </Link>
       </div>
     </div>
   )

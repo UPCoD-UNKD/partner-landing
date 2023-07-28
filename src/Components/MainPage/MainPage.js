@@ -54,7 +54,7 @@ export default function main() {
       <OfferBanner />
 
       <SectionTemplate 
-        component={[<Info />, <Info />, <Info />]}
+        component={[<Info key={1}/>, <Info key={2}/>, <Info key={3}/>]}
         title={'Як це працює'}
       />
       <Offer />
