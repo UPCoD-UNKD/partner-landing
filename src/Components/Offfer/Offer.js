@@ -15,7 +15,7 @@ export default function Offer() {
             разом з нами
           </h3>
         </div>
-        <Link to={'#'} className="Offer__link">
+        <Link to={'https://docs.google.com/forms/d/e/1FAIpQLScJrJKDCLj3hRd5Mt077Xi-phIpe-y9C3HkW-Qjspf625waww/viewform?usp=sf_link'} className="Offer__link">
                 Отримати партнерку 
         </Link>
       </div>

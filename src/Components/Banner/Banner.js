@@ -23,7 +23,7 @@ export default function Banner() {
               <br/>
             прямо зараз!
             </h1>
-            <Link to={'#'} className="Banner__link">
+            <Link to={'https://docs.google.com/forms/d/e/1FAIpQLScJrJKDCLj3hRd5Mt077Xi-phIpe-y9C3HkW-Qjspf625waww/viewform?usp=sf_link'} className="Banner__link">
               Отримати партнерку 
             </Link>
           </div>
