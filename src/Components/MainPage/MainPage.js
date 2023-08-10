@@ -1,11 +1,15 @@
 import React from 'react'
 import Input from '../../Common/Input/Input'
+import SectionTemplate from '../../Common/SectionTemplate/SectionTemplate'
+import UserCommentCard from '../../Common/UserCommentCard/UserCommentCard'
+import OfferBanner from '../OfferBanner/OfferBanner'
+import Info from '../Info/Info'
+import Offer from '../Offfer/Offer'
+
 import './MainPage.scss'
 import substract from './../../assets/img/subtract.svg'
 import done from './../../assets/img/done.svg'
 import submit from './../../assets/img/right_arrow.svg'
-import CommentsBlock from '../ComentsBlock/CommentsBlock'
-import Offer from '../Offer/Offer'
 
 export default function main() {
 
@@ -29,18 +33,29 @@ export default function main() {
           </button>
         </form>
       </div>
-      <CommentsBlock 
-        title='наші клієнти говорять'
-        name={'Уляна Селезньова'}
-        comment={''}
-        user={''}
+      <SectionTemplate 
+        component={
+        <UserCommentCard 
+          name={'Уляна Селезньова'}
+          comment={'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.'}
+        />}
+        title={'наші клієнти говорять'}
       />
-      <CommentsBlock 
-        title='Наші бізнес партнери говорять'
-        name={'Михайло Амбросимів'}
-        comment={''}
-        user={''}
-        position={'Маркетолог'}
+
+      <SectionTemplate 
+        component={
+        <UserCommentCard 
+          name={'Михайло Амбросимів'}
+          comment={'Підключили партенрську програму з і збільшили за квартал продаж відео техніки на 48 %.'}
+          position={'Маркетолог'}
+        />}
+        title={'Наші бізнес партнери говорять'}
+      />
+      <OfferBanner />
+
+      <SectionTemplate 
+        component={[<Info key={1}/>, <Info key={2}/>, <Info key={3}/>]}
+        title={'Як це працює'}
       />
       <Offer />
     </main>

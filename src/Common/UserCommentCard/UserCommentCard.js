@@ -9,11 +9,10 @@ import SliderDots from '../SliderDots/SliderDots'
 
 export default function UserCommentCard({name, comment, users, position}) {
   return (
-    <>
-      <div className="UserCommentCard">
+    <div className="UserCommentCard">
+      <div className="UserCommentCard__inner">
         <span className="UserCommentCard__msg">
-          {/* {comment} */}
-          З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.
+          {comment}
         </span>
         <div className="UserCommentCard__users">
           <div className="UserCommentCard__users-current">
@@ -43,6 +42,6 @@ export default function UserCommentCard({name, comment, users, position}) {
         </div>
       </div>
       <SliderDots />
-    </>
+    </div>
   )
 }

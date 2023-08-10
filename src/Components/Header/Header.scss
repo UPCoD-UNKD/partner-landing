@@ -5,10 +5,8 @@
         display: flex;
         margin: 13px 0;
         justify-content: space-between;
-        color: #A9CF54;
+        align-items: center;
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 22px;
     }
 
     &__logo {
@@ -23,6 +21,9 @@
     
         &-item {
             margin-right: 50px;
+            color: #A9CF54;
+            font-weight: 700;
+            font-size: 22px;
             cursor: pointer;
     
             &:last-child {

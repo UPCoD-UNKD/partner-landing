@@ -1,0 +1,50 @@
+.Offer {
+    padding: 96px 0;
+    background-color: #202020;
+    background-image: url('../../assets/img/logo_back.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px 100px 0 0;
+    text-align: center;
+
+    &__title {
+        color: #fff;
+        font-size: 72px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+        &-wrap {
+            margin-bottom: 44px;
+        }
+    }
+
+    p {
+        color: #669005;
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: block;
+        text-transform: uppercase;
+        margin: 0 auto;
+        max-width: 480px;
+        text-decoration: none;
+        font-size: 28px;
+        color: #fff;
+        padding: 26px 80px;
+        border: 4px solid #A9CF54;
+        border-radius: 50px;
+        text-align: center;
+
+        &:hover {
+            color: #202020;
+            background-color: #A9CF54;
+            border-color: rgb(37, 40, 30, 0.502);
+        }
+    }
+
+    .fz64 {
+        font-size: 64px;
+    }
+}
