@@ -1,0 +1,611 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "app",
+    "description": "This is the Swagger documentation for interacting with our application's API.",
+    "contact": {
+      "name": "app",
+      "url": ""
+    },
+    "version": "1.0.1"
+  },
+  "externalDocs": {
+    "description": "API for application",
+    "url": ""
+  },
+  "consumes": ["application/json", "multipart/form-data"],
+  "produces": ["application/json"],
+  "servers": [{ "url": "http://localhost:3001/api" }],
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "Auth endpoints"
+    },
+    {
+      "name": "Urls",
+      "description": "Urls endpoints"
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "New user registration",
+        "produces": ["application/json"],
+        "requestBody": {
+          "description": "The request body user registration",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The user is registered",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string",
+                      "description": "The JWT access token"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/UserResponse"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body",
+            "content": {}
+          },
+          "409": {
+            "description": "Email in use",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "User log in",
+        "produces": ["application/json"],
+        "requestBody": {
+          "description": "The request body user log in",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string",
+                      "description": "The JWT access token"
+                    },
+                    "user": {
+                      "$ref": "#/components/schemas/UserResponse"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body",
+            "content": {}
+          },
+          "401": {
+            "description": "Email is wrong",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "User logout",
+        "security": [{ "Bearer": [] }],
+        "produces": ["application/json"],
+        "responses": {
+          "204": {
+            "description": "Successful user logout",
+            "content": {}
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/auth/current": {
+      "get": {
+        "tags": ["Auth"],
+        "summary": "Get data current user",
+        "security": [{ "Bearer": [] }],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Current user data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          }
+        }
+      }
+    },
+
+    "/url": {
+      "get": {
+        "tags": ["Urls"],
+        "summary": "Get all urls",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Page number for pagination"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Limit of items per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "page": {
+                      "type": "string",
+                      "description": "1"
+                    },
+                    "perPage": {
+                      "type": "string",
+                      "description": "10"
+                    },
+                    "totalPages": {
+                      "type": "string",
+                      "description": "452"
+                    },
+                    "urls": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UrlResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/owner": {
+      "get": {
+        "tags": ["Urls"],
+        "summary": "Get all urls for owner",
+        "security": [{ "Bearer": [] }],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Page number for pagination"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Limit of items per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "page": {
+                      "type": "string",
+                      "description": "1"
+                    },
+                    "perPage": {
+                      "type": "string",
+                      "description": "10"
+                    },
+                    "totalPages": {
+                      "type": "string",
+                      "description": "52"
+                    },
+                    "urls": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UrlResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/add": {
+      "post": {
+        "tags": ["Urls"],
+        "summary": "Add new url",
+        "security": [{ "Bearer": [] }],
+        "produces": ["application/json"],
+        "requestBody": {
+          "description": "Url data",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UrlRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Url added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UrlResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Invalid token"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/delete/{id}": {
+      "delete": {
+        "tags": ["Urls"],
+        "summary": "Delete a url by id",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Url's id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Url deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Url not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/{id}": {
+      "get": {
+        "tags": ["Urls"],
+        "summary": "Get a url by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Url's id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UrlOne"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Url not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/update/{id}": {
+      "patch": {
+        "tags": ["Urls"],
+        "summary": "Update a url by id",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Url's id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {
+          "description": "Url data",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UrlRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UrlResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Url not found",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RegistrationRequest": {
+        "type": "object",
+        "required": ["name", "email"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "User name",
+            "example": "Example"
+          },
+          "email": {
+            "type": "string",
+            "description": "User email",
+            "format": "email",
+            "example": "example@example.com"
+          }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["email"],
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "User email",
+            "format": "email",
+            "example": "example@example.com"
+          }
+        }
+      },
+      "UserResponse": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "description": "User id",
+            "example": "6510466df3fcc9fcf527418b"
+          },
+          "name": {
+            "type": "string",
+            "description": "User name",
+            "example": "Example"
+          },
+          "email": {
+            "type": "string",
+            "description": "User email",
+            "example": "example@example.com"
+          }
+        }
+      },
+
+      "UrlRequest": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The url",
+            "example": "https://example.com"
+          }
+        }
+      },
+      "UrlResponse": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "description": "Url's id",
+            "example": "651186532c7fca2273ad2acf"
+          },
+          "url": {
+            "type": "string",
+            "description": "The url",
+            "example": "https://example.com"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The id of the user who owns the url",
+            "example": "64bd86de7f96cefd06432c5d"
+          }
+        }
+      },
+      "UrlOne": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "description": "Url's id",
+            "example": "651186532c7fca2273ad2acf"
+          },
+          "url": {
+            "type": "string",
+            "description": "The url",
+            "example": "https://example.com"
+          },
+          "owner": {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string",
+                "description": "User id",
+                "example": "651186d42c7fca2273ad2ae6"
+              },
+              "name": {
+                "type": "string",
+                "description": "User name",
+                "example": "Example"
+              },
+              "email": {
+                "type": "string",
+                "description": "User email",
+                "example": "example@example.com"
+              }
+            }
+          }
+        }
+      },
+      "DeleteResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Notification of successful deletion"
+          },
+          "deletedUrlId": {
+            "type": "string",
+            "description": "Id of the deleted object",
+            "example": "651186d42c7fca2273ad2ae6"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
