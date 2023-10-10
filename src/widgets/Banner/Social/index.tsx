@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const SocialIcon = styled.img`
-	width: 5rem;
-	height: 5rem;
+	width: 2rem;
+	height: 2rem;
 `
 interface SocialProps {
 	iconSrc: string

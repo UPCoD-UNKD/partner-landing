@@ -13,13 +13,7 @@ export default function ParthnerList(props: ParthnersProps) {
   return (
     <Wrapper>
       <Inner>
-        {parthners.map(p => {
-          return (
-            <Parthner>
-              {p}
-            </Parthner>
-          )
-        })}
+        {parthners.map(p => <Parthner>{p}</Parthner>)}
       </Inner>
       <Description>
         Співпраця з торговими майданчиками

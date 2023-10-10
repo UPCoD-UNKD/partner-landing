@@ -6,5 +6,5 @@ export const Subtitle = styled.div`
   color: #fff;
   margin-left: 1.875rem;
   font-size: 1rem;
-  width: 24%;
+  width: 26%;
 `

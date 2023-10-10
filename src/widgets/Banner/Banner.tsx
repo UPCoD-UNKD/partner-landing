@@ -9,31 +9,44 @@ import { Subtitle } from './Subtitle';
 import { Link } from './Link';
 import { Scroll } from './Scroll';
 import { Social, SocialList } from './Social';
+import { Inner } from './Inner';
 
 export default function Banner() {
   return (
     <Wrapper>
-      <div className="title-wrap">
-        <Title>
-          Розблокуйте свій потенціал
-          <Subtitle>
-            для тих, хто прагне вже сьогодні збільшити прибуток!
-          </Subtitle>
-          прямо зараз!
-        </Title>
+      <Inner>
+        <div style={{ flexBasis: '91%' }}>
+          <Title>
+            Розблокуйте свій потенціал
+            <Subtitle>
+              для тих, хто прагне вже сьогодні збільшити прибуток!
+            </Subtitle>
+            прямо зараз!
+          </Title>
+        </div>
+
+        <nav>
+          <SocialList>
+            <Social iconSrc={instagram} href='#' />
+            <Social iconSrc={facebook} href='#' />
+            <Social iconSrc={twitter} href='#' />
+            <Social iconSrc={linkedin} href='#' />
+          </SocialList>
+        </nav>
+      </Inner>
+
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: '2.5rem',
+        paddingRight: '10.25rem'
+      }}>
         <Link>
           Отримати партнерку
         </Link>
+        <Scroll src={scrollDown} alt="scroll down" />
       </div>
-      <Scroll src={scrollDown} alt="scroll down" />
-      <nav className="Banner__nav">
-        <SocialList>
-          <Social iconSrc={instagram} href='#' />
-          <Social iconSrc={facebook} href='#' />
-          <Social iconSrc={twitter} href='#' />
-          <Social iconSrc={linkedin} href='#' />
-        </SocialList>
-      </nav>
     </Wrapper>
   )
 }
