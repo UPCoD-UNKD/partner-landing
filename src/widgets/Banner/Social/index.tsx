@@ -9,6 +9,10 @@ interface SocialProps {
 	href?: string
 }
 
+const SocWrapper = styled.a`
+	
+`
+
 export const Social = (props: SocialProps) => {
 	const {
 		iconSrc,
@@ -16,15 +20,19 @@ export const Social = (props: SocialProps) => {
 	} = props
 
 	return (
-		<a href={href}>
+		<SocWrapper href={href}>
 			<SocialIcon src={iconSrc} />
-		</a>
+		</SocWrapper>
 	)
 }
 
 export const SocialList = styled.div`
 	display: flex;
   flex-direction: column;
-  gap: 30px;
-	margin-top: 70px;
+  gap: 1.875rem;
+	@media (max-width: 660px) {
+	flex-direction: row;
+	justify-content: center;
+	
+	}
 `

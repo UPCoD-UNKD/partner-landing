@@ -16,4 +16,11 @@ text-align: center;
     background-color: #A9CF54;
     border-color: rgb(37, 40, 30, 0.502);
 }
+
+@media (max-width: 738px) {
+    padding: 1rem 2.5rem;
+}
+@media (max-width: 532px) {
+    padding: 0.875 2.6875rem;
+}
 `

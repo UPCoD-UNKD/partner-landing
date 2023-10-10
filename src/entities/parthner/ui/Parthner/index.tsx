@@ -8,4 +8,9 @@ export const Parthner = styled.div`
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 40px;
+
+  @media (max-width: 738px) {
+    padding: 0.75rem 1.125rem;
+
+  }
 `
