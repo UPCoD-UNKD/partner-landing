@@ -1,4 +1,3 @@
-import React from 'react'
 import { HeaderText, LogoImage, LogoImageContainer, PageWrapper, SignUpHeader, SignUpRectangle, TextInsideLogo } from './SignUpPageStyles'
 import LogoImg from 'shared/assets/img/registrationpageicons/Subtract.svg'
 import SignUpForm from './SignUpForm'
