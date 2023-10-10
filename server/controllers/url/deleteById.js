@@ -11,7 +11,7 @@ const deleteById = async (req, res) => {
   });
 
   if (!result) {
-    throw HttpError(404, "Not found");
+    throw HttpError(404, "Url not found");
   }
 
   res.json({

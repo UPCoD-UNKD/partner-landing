@@ -202,16 +202,13 @@
                   "type": "object",
                   "properties": {
                     "page": {
-                      "type": "string",
-                      "description": "1"
+                      "type": "integer"
                     },
                     "perPage": {
-                      "type": "string",
-                      "description": "10"
+                      "type": "integer"
                     },
                     "totalPages": {
-                      "type": "string",
-                      "description": "452"
+                      "type": "integer"
                     },
                     "urls": {
                       "type": "array",
@@ -270,16 +267,13 @@
                   "type": "object",
                   "properties": {
                     "page": {
-                      "type": "string",
-                      "description": "1"
+                      "type": "integer"
                     },
                     "perPage": {
-                      "type": "string",
-                      "description": "10"
+                      "type": "integer"
                     },
                     "totalPages": {
-                      "type": "string",
-                      "description": "52"
+                      "type": "integer"
                     },
                     "urls": {
                       "type": "array",
@@ -387,6 +381,7 @@
     "/url/{id}": {
       "get": {
         "tags": ["Urls"],
+        "security": [{ "Bearer": [] }],
         "summary": "Get a url by id",
         "parameters": [
           {
@@ -403,7 +398,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UrlOne"
+                  "$ref": "#/components/schemas/UrlOneResponse"
                 }
               }
             }
@@ -451,6 +446,100 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UrlResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Url not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/url/stats/{id}": {
+      "get": {
+        "tags": ["Urls"],
+        "security": [{ "Bearer": [] }],
+        "summary": "Get statistics for url by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Url's id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "stats": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UrlStatsResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Url not found",
+            "content": {}
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Urls"],
+        "summary": "Add statistics for url by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Url's id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {
+          "description": "Url data",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UrlStatsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "stats": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UrlStatsResponse"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -527,6 +616,17 @@
             "type": "string",
             "description": "The url",
             "example": "https://example.com"
+          },
+          "utm": {
+            "type": "object",
+            "description": "UTM parameters",
+            "properties": {
+              "utm_any_key": {
+                "type": "string",
+                "description": "UTM parameter for any_key",
+                "example": "any_value"
+              }
+            }
           }
         }
       },
@@ -543,6 +643,17 @@
             "description": "The url",
             "example": "https://example.com"
           },
+          "utm": {
+            "type": "object",
+            "description": "UTM parameters",
+            "properties": {
+              "utm_any_key": {
+                "type": "string",
+                "description": "UTM parameter for any_key",
+                "example": "any_value"
+              }
+            }
+          },
           "owner": {
             "type": "string",
             "description": "The id of the user who owns the url",
@@ -550,7 +661,7 @@
           }
         }
       },
-      "UrlOne": {
+      "UrlOneResponse": {
         "type": "object",
         "properties": {
           "_id": {
@@ -562,6 +673,23 @@
             "type": "string",
             "description": "The url",
             "example": "https://example.com"
+          },
+          "utm": {
+            "type": "object",
+            "description": "UTM parameters",
+            "properties": {
+              "utm_any_key": {
+                "type": "string",
+                "description": "UTM parameter for any_key",
+                "example": "any_value"
+              }
+            }
+          },
+          "stats": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UrlStatsResponse"
+            }
           },
           "owner": {
             "type": "object",
@@ -596,6 +724,52 @@
             "type": "string",
             "description": "Id of the deleted object",
             "example": "651186d42c7fca2273ad2ae6"
+          }
+        }
+      },
+      "UrlStatsRequest": {
+        "type": "object",
+        "required": ["date", "ip", "browser"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date click url",
+            "example": "1970-01-01T00:00:00.021Z"
+          },
+          "ip": {
+            "type": "string",
+            "description": "The IP from which the url was clicked",
+            "example": "000.000.0.000"
+          },
+          "browser": {
+            "type": "string",
+            "description": "The browser from which the url was clicked",
+            "example": "Chrome"
+          }
+        }
+      },
+      "UrlStatsResponse": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date click url",
+            "example": "1970-01-01T00:00:00.021Z"
+          },
+          "ip": {
+            "type": "string",
+            "description": "The IP from which the url was clicked",
+            "example": "000.000.0.000"
+          },
+          "browser": {
+            "type": "string",
+            "description": "The browser from which the url was clicked",
+            "example": "Chrome"
+          },
+          "_id": {
+            "type": "string",
+            "description": "Stats id",
+            "example": "651fb4e564dac0ce5cc7761c"
           }
         }
       }

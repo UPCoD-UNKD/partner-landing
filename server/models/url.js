@@ -8,6 +8,17 @@ const urlSchema = new Schema(
       type: String,
       required: true,
     },
+    stats: [
+      {
+        date: { type: Date, required: true },
+        ip: { type: String, required: true },
+        browser: { type: String, required: true },
+      },
+    ],
+    utm: {
+      type: Schema.Types.Mixed,
+      required: false,
+    },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "user",

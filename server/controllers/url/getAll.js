@@ -10,11 +10,19 @@ const getAll = async (req, res) => {
 
   const totalPages = Math.ceil(total / perPage);
 
-  const result = await Url.find(req.query, "-updatedAt", { skip, limit }).sort({
+  const result = await Url.find(req.query, "-createdAt -updatedAt", {
+    skip,
+    limit,
+  }).sort({
     createdAt: -1,
   });
 
-  res.status(200).json({ page, perPage, totalPages, urls: result });
+  const urls = result.map((item) => {
+    const { _id, url, owner } = item;
+    return { _id, url, owner };
+  });
+
+  res.status(200).json({ page, perPage, totalPages, urls });
 };
 
 module.exports = {

@@ -4,6 +4,8 @@ const { getAll } = require("./getAll");
 const { getAllOwner } = require("./getAllOwner");
 const { getById } = require("./getById");
 const { updateById } = require("./updateById");
+const { getStats } = require("./getStats");
+const { clickUrl } = require("./clickUrl");
 
 module.exports = {
   add,
@@ -12,4 +14,6 @@ module.exports = {
   getAllOwner,
   getById,
   updateById,
+  getStats,
+  clickUrl,
 };
