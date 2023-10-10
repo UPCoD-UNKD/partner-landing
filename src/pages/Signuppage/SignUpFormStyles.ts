@@ -63,5 +63,5 @@ export const CheckBox = styled.input `
 `
 
 export const a = styled.a `
-    cursor: po;
+    cursor: pointer;
 `

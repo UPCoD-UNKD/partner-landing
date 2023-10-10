@@ -1,4 +1,3 @@
-import React from 'react'
 import  { GoogleButton, HeaderText, Icon, LogoImage, LogoImageContainer, PageWrapper, RectangleTextHelper, RegistrationRectangle, TextInsideLogo} from './RegistrationPageStyles'
 import LogoImg from 'shared/assets/img/registrationpageicons/Subtract.svg'
 import GoogleIcon from 'shared/assets/img/registrationpageicons/flat-color-icons_google.svg'
