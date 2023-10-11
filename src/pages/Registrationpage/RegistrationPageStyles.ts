@@ -6,32 +6,12 @@ import styled from 'styled-components'
     height: 100vh;
     text-align: center;
     padding-top: 121.5px;
+    align-items: center;
 `
 
-export const LogoImageContainer = styled.div`
-  position: relative;
-  display: inline-block; 
-`;
-
-export const LogoImage = styled.img`
-  width: 90px;
-  height: 90px;
-`;
 
 
-export const TextInsideLogo = styled.p`
-  color: white;
-  position: absolute; 
-  top: 65%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  color: white;
-    font-size: 18.79px;
-    font-family: Fontin Sans CR;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.38px;
-`;
+
 
 export const HeaderText = styled.p `
     color: white;
@@ -47,8 +27,7 @@ export const RegistrationRectangle = styled.article `
     height: 420px;
     background-color: #DDDDDD;
     border-radius: 40px;
-    text-align: center;
-    margin-left: 530px;
+    margin-left: 38.5%;
     margin-top: 40px;
 `
 export const Icon = styled.img `

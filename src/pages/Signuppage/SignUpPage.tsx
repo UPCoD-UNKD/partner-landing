@@ -1,16 +1,13 @@
-import { HeaderText, LogoImage, LogoImageContainer, PageWrapper, SignUpHeader, SignUpRectangle, TextInsideLogo } from './SignUpPageStyles'
-import LogoImg from 'shared/assets/img/registrationpageicons/Subtract.svg'
+import { HeaderText, PageWrapper, SignUpHeader, SignUpRectangle} from './SignUpPageStyles'
 import SignUpForm from './SignUpForm'
+import LogoandImage from 'shared/ui/logo/LogoandImage'
 
 
 const SignUpPage = () => {
   return (
     <div>
          <PageWrapper>
-        <LogoImageContainer>
-            <LogoImage src={LogoImg} alt="" />
-            <TextInsideLogo>BARGIAN</TextInsideLogo>
-        </LogoImageContainer>
+        <LogoandImage />
         <HeaderText>Партнерська програма</HeaderText>
         <SignUpRectangle>
             <SignUpHeader>

@@ -1,7 +1,8 @@
-import  { GoogleButton, HeaderText, Icon, LogoImage, LogoImageContainer, PageWrapper, RectangleTextHelper, RegistrationRectangle, TextInsideLogo} from './RegistrationPageStyles'
-import LogoImg from 'shared/assets/img/registrationpageicons/Subtract.svg'
+import  { GoogleButton, HeaderText, Icon, PageWrapper, RectangleTextHelper, RegistrationRectangle,} from './RegistrationPageStyles'
+
 import GoogleIcon from 'shared/assets/img/registrationpageicons/flat-color-icons_google.svg'
 import LoginForm from './LoginForm'
+import LogoandImage from 'shared/ui/logo/LogoandImage'
 
 
 
@@ -9,10 +10,7 @@ const RegistrationPage = () => {
     
   return (
     <PageWrapper>
-        <LogoImageContainer>
-            <LogoImage src={LogoImg} alt="" />
-            <TextInsideLogo>BARGIAN</TextInsideLogo>
-        </LogoImageContainer>
+        <LogoandImage />
         <HeaderText>Партнерська програма</HeaderText>
         <RegistrationRectangle>
             <GoogleButton>
