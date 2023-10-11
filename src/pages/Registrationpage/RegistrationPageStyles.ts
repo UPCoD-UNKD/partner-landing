@@ -7,6 +7,7 @@ import styled from 'styled-components'
     text-align: center;
     padding-top: 121.5px;
     align-items: center;
+    justify-content: center;
 `
 
 
@@ -27,7 +28,7 @@ export const RegistrationRectangle = styled.article `
     height: 420px;
     background-color: #DDDDDD;
     border-radius: 40px;
-    margin-left: 38.5%;
+    margin-left: 780px;
     margin-top: 40px;
 `
 export const Icon = styled.img `

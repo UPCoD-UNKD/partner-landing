@@ -50,7 +50,7 @@ export const SignUpRectangle = styled.article `
     background-color: #DDDDDD;
     border-radius: 40px;
     text-align: center;
-    margin-left: 38.5%;
+    margin-left: 780px;
     margin-top: 40px;
     text-align: center;
 `
