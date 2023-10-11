@@ -2,7 +2,7 @@ import instagram from 'shared/assets/img/social/instagram.svg';
 import facebook from 'shared/assets/img/social/facebook.svg';
 import linkedin from 'shared/assets/img/social/linkedin.svg';
 import twitter from 'shared/assets/img/social/twitter.svg';
-import scrollDown from 'shared/assets/img/scroll_down.svg';
+
 import { Wrapper } from './Wraper';
 import { Title } from './Title';
 import { Subtitle } from './Subtitle';
@@ -46,7 +46,7 @@ export default function Banner() {
         <Link href='#'>
           Отримати партнерку
         </Link>
-        <Scroll src={scrollDown} alt="scroll down" />
+        <Scroll />
       </Options>
     </Wrapper>
   )

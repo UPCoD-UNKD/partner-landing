@@ -5,12 +5,12 @@ export const Options = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 2.5rem;
-  padding-right: 10.25rem;
+	max-width: 53.875rem;
 
 	@media (max-width: 931px) {
-		padding-right: 9.21rem;
+		max-width: 34.875rem;
 	}
 	@media (max-width: 630px) {
-		padding-right: 0;
+		max-width: 22.75rem;
 	}
 `

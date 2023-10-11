@@ -21,6 +21,6 @@ text-align: center;
     padding: 1rem 2.5rem;
 }
 @media (max-width: 532px) {
-    padding: 0.875 2.6875rem;
+    padding: 0.875rem 2.6875rem;
 }
 `

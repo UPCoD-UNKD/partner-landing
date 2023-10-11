@@ -11,13 +11,20 @@ export const Subtitle = styled.div`
   @media (max-width: 931px) {
 	font-size: 0.875rem;
 	line-height: 1.6375rem;
+	margin-left: 1rem;
 }
-@media (max-width: 610px) {
+@media (max-width: 546px) {
+	font-size: 0.8125rem;
+	line-height: 1.3rem;
+	margin-left: 0.65rem;
+}
+@media (max-width: 402px) {
 	font-size: 0.8125rem;
 	line-height: 1rem;
 }
-@media (max-width: 508px) {
-	font-size: 0.650rem;
-	/* line-height: 1rem; */
+@media (max-width: 384px) {
+	font-size: 0.6rem;
+	/* line-height: 2.6rem; */
 }
+
 `
