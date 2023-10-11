@@ -28,7 +28,7 @@ export const RegistrationRectangle = styled.article `
     height: 420px;
     background-color: #DDDDDD;
     border-radius: 40px;
-    margin-left: 500px;
+    margin-left: 520px;
     margin-top: 40px;
 `
 export const Icon = styled.img `
