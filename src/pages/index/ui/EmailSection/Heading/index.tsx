@@ -42,7 +42,7 @@ const Text = styled.h3`
 	& span {
 		display: block;
 		background-color: white;
-		max-width: 50%;
+		/* max-width: 50%; */
 	}
 
 	@media (max-width: 900px) {
