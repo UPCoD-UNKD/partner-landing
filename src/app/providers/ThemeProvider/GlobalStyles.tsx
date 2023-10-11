@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import regularFont from 'shared/assets/fonts/FontinsSansSR/subset-FontinSansCR-Regular.svg'
-import boldFont from 'shared/assets/fonts/FontinsSansSR/subset-FontinSansCR-Bold.svg'
+import regularFont from 'shared/assets/fonts/FontinsSansSR/subset-FontinSansCR-Regular.ttf'
+import boldFont from 'shared/assets/fonts/FontinsSansSR/subset-FontinSansCR-Bold.ttf'
 
 export const GlobalStyle = createGlobalStyle`
 

@@ -7,4 +7,11 @@ export const Description = styled.p`
 	margin-top: 2rem;
 	font-weight: 700;
 	opacity: .7;
+
+	@media (max-width: 738px) {
+		font-size: 1rem;
+	}
+	@media (max-width: 550px) {
+		font-size: 0.8125rem;
+	}
 `
