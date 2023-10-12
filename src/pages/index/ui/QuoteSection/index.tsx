@@ -2,7 +2,6 @@ import { Container } from "shared/ui/page-layout/Container"
 import styled from "styled-components"
 import quoteIcon from 'shared/assets/img/quotes.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { UserCard } from "./UserCard";
 import { BlackSection } from "pages/index/LandingWrapper";
 
