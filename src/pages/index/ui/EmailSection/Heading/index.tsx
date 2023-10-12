@@ -49,14 +49,24 @@ const Text = styled.h3`
 		font-size: 2.5rem;
 		padding-top: 4.9375rem;
 	}
+	@media (max-width: 738px) {
+		font-size: 2.1rem;
+	}
+	@media (max-width: 647px) {
+		font-size: 1.7rem;
+    padding-top: 4.375rem;
+	}
 	@media (max-width: 550px) {
-		font-size: 2.1875rem;
 		padding-top: 3.375rem;
 	}
-	@media (max-width: 450px) {
-		font-size: 1.7rem;
+	/* @media (max-width: 550px) {
+		font-size: 2.1875rem;
+		padding-top: 3.375rem;
+	} */
+	/* @media (max-width: 450px) { */
+		/* font-size: 1.7rem; */
 		/* padding-top: 3.375rem; */
-	}
+	/* } */
 `
 
 export const Heading = () => {

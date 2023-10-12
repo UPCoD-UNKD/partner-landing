@@ -5,6 +5,7 @@ import { QuoteSection } from './ui/QuoteSection'
 import styled from 'styled-components'
 import { HowItWorks } from './ui/HowItWorks'
 import { Footer } from './ui/Footer'
+import { Offer } from './ui/Offer'
 
 const MarginedQuoteSection = styled(QuoteSection)`
 	margin-top: 3.125rem;
@@ -35,7 +36,7 @@ export default function IndexPage() {
 
 
 			]} />
-			{/* <Offer /> */}
+			<Offer />
 			<HowItWorks steps={[
 				{
 					title: 'Автоматичне створення кабінету',
