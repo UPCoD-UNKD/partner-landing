@@ -36,7 +36,7 @@ export default function IndexPage() {
 
 
 			]} />
-			<Offer />
+			{/* <Offer /> */}
 			<HowItWorks steps={[
 				{
 					title: 'Автоматичне створення кабінету',

@@ -12,6 +12,13 @@ const Inner = styled(Swiper)`
 	padding: 2rem 3.125rem;
 	border-radius: 2rem;
 
+	@media (max-width: 900px) {
+		padding: 1.625rem 2.75rem 0.8125rem;
+	}
+	@media (max-width: 500px) {
+		padding: 1rem 2rem 0.8125rem;
+	}
+
 `
 const QuoteWrapper = styled.div`
 	display: flex;
@@ -30,6 +37,13 @@ const Quote = styled.blockquote`
 	font-size: 1.125rem;
 	font-weight: 400;
 	flex: 1 0;
+
+	@media (max-width: 900px) {
+		font-size: 0.875rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 0.625rem;
+	}
 `
 
 
@@ -40,6 +54,13 @@ const Center = styled.div`
 	max-width: 52%;
 	padding: 6.125rem 0 7.9375rem;
 	margin: 0 auto;
+
+	@media (max-width: 900px) {
+		max-width: 56%;
+	}
+	@media (max-width: 500px) {
+		max-width: 72%;
+	}
 `
 
 
