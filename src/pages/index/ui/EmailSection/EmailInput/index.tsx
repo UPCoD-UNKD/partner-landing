@@ -18,6 +18,9 @@ const Wrapper = styled.div`
 	@media (max-width: 738px) {
 		/* top: 10.5625rem; */
 	}
+	@media (max-width: 550px) {
+		margin-bottom: 0;
+	}
 `
 const Input = styled.input.attrs({
 	type: 'text',
@@ -27,7 +30,7 @@ const Input = styled.input.attrs({
 	border: 3px solid rgb(169, 207, 84);
 	border-radius: 100px;
 	padding: 0 1.5625rem;
-	flex-basis: 19.75rem;
+	/* flex-basis: 19.75rem; */
 	font-size: 1.1875rem;
 	flex-shrink: 0;
 	&::placeholder{
@@ -36,9 +39,11 @@ const Input = styled.input.attrs({
 
 	@media (max-width: 900px) {
 		padding: 0 1rem;
+		font-size: 0.95rem;
 	}
 	@media (max-width: 550px) {
-		padding: 0 0.8125rem;
+		padding: 0 0.5125rem;
+
 	}
 `
 
@@ -50,6 +55,15 @@ const Submit = styled.button.attrs({
 	height: 3.9375rem;
 	flex-shrink: 0;
 	flex-grow: 0;
+
+	@media (max-width: 900px) {
+		width: 2.5625rem;
+		height: 2.5625rem;
+	}
+	@media (max-width: 550px) {
+		width: 2.3125rem;
+		height: 2.3125rem;
+	}
 `
 
 export const EmailInput = () => {
