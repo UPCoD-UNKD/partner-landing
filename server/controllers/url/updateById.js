@@ -5,13 +5,13 @@ const { ctrlWrapper } = require("../../decorators");
 const updateById = async (req, res) => {
   const { urlId } = req.params;
   const { _id: owner } = req.user;
-  const { url } = req.body;
+  const { url, utm } = req.body;
 
   const urlToUpdate = await Url.findOneAndUpdate(
     {
       $and: [{ _id: urlId, owner }],
     },
-    { url },
+    { url, utm },
     { new: true }
   );
 

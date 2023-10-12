@@ -615,7 +615,7 @@
           "url": {
             "type": "string",
             "description": "The url",
-            "example": "https://example.com"
+            "example": "https://cut.ly/example"
           },
           "utm": {
             "type": "object",
@@ -641,7 +641,7 @@
           "url": {
             "type": "string",
             "description": "The url",
-            "example": "https://example.com"
+            "example": "https://cut.ly/example"
           },
           "utm": {
             "type": "object",
@@ -672,7 +672,7 @@
           "url": {
             "type": "string",
             "description": "The url",
-            "example": "https://example.com"
+            "example": "https://cut.ly/example"
           },
           "utm": {
             "type": "object",

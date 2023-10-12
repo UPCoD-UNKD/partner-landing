@@ -11,7 +11,7 @@ const getAllOwner = async (req, res) => {
 
   const totalPages = Math.ceil(total / perPage);
 
-  const result = await Url.find({ owner }, "-updatedAt", {
+  const result = await Url.find({ owner }, "-createdAt -updatedAt", {
     skip,
     limit,
   }).sort({ createdAt: -1 });
