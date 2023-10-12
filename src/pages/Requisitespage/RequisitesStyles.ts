@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 export const WarningTable = styled.article `
-    width: 1077px;
-    height: 70px;
+    width: 977px;
+    height: 60px;
     margin-left: 109px;
     margin-top: 30px;
     background: rgba(32, 32, 32, 0.10);
@@ -17,6 +17,7 @@ export const PageDiv = styled.div `
 export const RequisitesPageContainer = styled.div `
     display: flex;
     flex-direction: row;
+    width: 100vw;
 `
 export const AttentionIcon = styled.img `
    width: 20px;

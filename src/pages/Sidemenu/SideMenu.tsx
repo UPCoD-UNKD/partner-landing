@@ -1,4 +1,4 @@
-import { ApiImg, ArrowLeft, ArrowsImg, BankImg, ClientsImg, Ellipse, GraphicImg, LanguageImg, LinksImg, MenuList, MenuListItem, MenuListItemBorder, PartnerImg, ReferralImg, SideMenuContainer, TeamImg, VectorImg } from './SideMenuStyles'
+import { ApiImg, ArrowButton, ArrowLeft, ArrowsImg, BankImg, ClientsImg, Ellipse, GraphicImg, LanguageImg, LinksImg, MenuList, MenuListItem, MenuListItemBorder, PartnerImg, ReferralImg, SideMenuContainer, TeamImg, VectorImg } from './SideMenuStyles'
 import bankImg from 'shared/assets/img/sidemenu/Bank.png'
 import graphicImg from 'shared/assets/img/sidemenu/Зведення.png'
 import clientsImg from 'shared/assets/img/sidemenu/People alt.png'
@@ -63,8 +63,10 @@ const SideMenu = () => {
                 <LanguageImg src={languageImg} alt="" />
             </MenuListItem>
         </MenuList>
-    <Ellipse  src={ellipse}/>
-    <ArrowLeft src={arrowleft}/>
+        <ArrowButton>
+            <Ellipse  src={ellipse}/>
+            <ArrowLeft src={arrowleft}/>
+        </ArrowButton>
     </SideMenuContainer>
     </>
   )

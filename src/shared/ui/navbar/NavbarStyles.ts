@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const NavbarContainer = styled.div `
-    width: 100vw;
+    width: 100%;
     background: #202020;
     height: 90px;
     display: flex;
@@ -25,7 +25,7 @@ export const TextInsideLogo = styled.p`
   color: white;
   position: absolute; 
   top: 62.1%; 
-  left:85%; 
+  left:90%; 
   transform: translate(-50%, -50%); 
   color: white;
     font-size: 14.09px;

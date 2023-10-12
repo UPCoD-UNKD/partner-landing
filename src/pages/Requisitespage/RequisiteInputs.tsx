@@ -4,7 +4,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 45px;
+  margin-top: 35px;
 `;
 
 const InputLabel = styled.label`
@@ -16,9 +16,9 @@ const InputField = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-  height: 36px;
+  height: 26px;
   margin-bottom: 16px;
-  padding: 5px;
+  padding-left: 10px;
 `;
 
 const ReqInput2 = styled.div`
@@ -117,7 +117,7 @@ const InputFieldSelect = styled.select `
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-  height: 36px;
+  height: 26px;
   margin-bottom: 16px;
   padding: 5px;
 `

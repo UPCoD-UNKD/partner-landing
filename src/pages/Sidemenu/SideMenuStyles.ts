@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 export const SideMenuContainer = styled.div `
-    width: 315px;
-    height: 733px;
+    width: 312px;
+    height: 550px;
     left:0;
     background: #202020;
 
@@ -14,35 +14,47 @@ export const MenuList = styled.ul `
     display: flex;
     flex-direction: column;
 `
-
+export const ArrowButton = styled.div `
+cursor: pointer;
+`
 
 export const MenuListItem = styled.li `
     color: #F7F8FA;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     width: 312px;
-    height: 65px;
-    padding: 25px 30px;
+    height: 45px;
+    padding: 25px 30px 25px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+    &:hover {
+        background: #E2FAAD;
+        color: #5C624F;
+    }
 `
 
 
 export const MenuListItemBorder = styled.li `
     color: #F7F8FA;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     width: 312px;
-    height: 65px;
+    height: 45px;
     padding: 25px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px silver solid;
     text-align: center;
+    align-items: center;
     cursor: pointer;
+     &:hover {
+        background: #E2FAAD;
+        color: #5C624F;
+    }
 `
 
 

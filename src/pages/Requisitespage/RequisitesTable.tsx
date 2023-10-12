@@ -16,6 +16,17 @@ export const RequisiteTableHeader = styled.h2 `
   font-size: 19.19px;
   font-weight: 400;
   letter-spacing: 0.19px;
+  display: flex;
+  flex-direction: row;
+  gap: 400px;
+`
+
+const SecondHeader = styled.h2 `
+  color: #060606;
+  font-size: 19.19px;
+  font-weight: 400;
+  letter-spacing: 0.19px;
+  margin-left: 70px;
 `
 
 const RequisiteTables = styled.div `
@@ -30,6 +41,7 @@ const RequisitesTable = () => {
         <RequisitesTableStructure>
             <RequisiteTableHeader>
               Реквізити
+              <SecondHeader>Інформація про керівника</SecondHeader>
             </RequisiteTableHeader>
             <RequisiteTables>
               <RequisiteInputs />
