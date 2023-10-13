@@ -1,5 +1,5 @@
-import ClientsPage from "pages/ClientsPage/ClientsPage";
-// import OverviewPage from "pages/Overviewpage/OverviewPage";
+// import ClientsPage from "pages/ClientsPage/ClientsPage";
+import OverviewPage from "pages/Overviewpage/OverviewPage";
 // import RegistrationPage from "pages/Registrationpage/RegistrationPage";
 // import RequisitesPage from "pages/Requisitespage/RequisitesPage";
 // import SignUpPage from "pages/Signuppage/SignUpPage";
@@ -13,8 +13,8 @@ function App() {
   {/* <RegistrationPage />
   <SignUpPage /> */}
   {/* <RequisitesPage /> */}
-  {/* <OverviewPage /> */}
-  <ClientsPage />
+  <OverviewPage />
+  {/* <ClientsPage /> */}
   </>
   );
 }
