@@ -24,9 +24,20 @@ export default function IndexPage() {
 					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
 					position: 'Front-end developer'
 				},
-
+				{
+					name: 'Igor Komendantov',
+					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
+					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
+					position: 'Front-end developer'
+				},
 			]} />
 			<MarginedQuoteSection title='Наші бізнес партнери говорять' quotes={[
+				{
+					name: 'Igor Komendantov',
+					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
+					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
+					position: 'Front-end developer'
+				},
 				{
 					name: 'Igor Komendantov',
 					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',

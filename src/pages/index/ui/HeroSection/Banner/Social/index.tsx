@@ -7,6 +7,7 @@ export const SocialIcon = styled.img`
 interface SocialProps {
 	iconSrc: string
 	href?: string
+	className?: string
 }
 
 const SocWrapper = styled.a`
@@ -17,10 +18,11 @@ export const Social = (props: SocialProps) => {
 	const {
 		iconSrc,
 		href,
+		className
 	} = props
 
 	return (
-		<SocWrapper href={href}>
+		<SocWrapper href={href} className={className}>
 			<SocialIcon src={iconSrc} />
 		</SocWrapper>
 	)

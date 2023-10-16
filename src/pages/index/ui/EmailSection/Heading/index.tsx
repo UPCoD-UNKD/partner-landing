@@ -17,15 +17,29 @@ const Circle = styled.div`
 		width: 9.875rem;
 		height: 9.875rem;
 	}
+	@media (max-width: 425px) {
+		/* width: 6.875rem; */
+		/* height: 6.875rem; */
+	}
 	
 `
 
 const Wrapper = styled.div`
 	position: relative;
 	padding-top: 1.5625rem;
-	margin-left: 5.1875rem;
 	margin-top: 1.375rem;
 	flex-grow: 1;
+	
+	/* margin-left: 5.1875rem;
+	
+	@media (max-width: 900px) {
+		margin-left: 3.375rem;
+		margin-right: 3.375rem;
+	}
+	@media (max-width: 550px) {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	} */
 `
 
 const Text = styled.h3`
@@ -58,6 +72,9 @@ const Text = styled.h3`
 	}
 	@media (max-width: 550px) {
 		padding-top: 3.375rem;
+	}
+	@media (max-width: 422px) {
+		font-size: 1.4rem;
 	}
 	/* @media (max-width: 550px) {
 		font-size: 2.1875rem;
