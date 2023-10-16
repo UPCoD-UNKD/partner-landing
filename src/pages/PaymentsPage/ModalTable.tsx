@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import closeBtn from 'shared/assets/img/PaymentTable/x.svg'
 const Modaltable = styled.div `

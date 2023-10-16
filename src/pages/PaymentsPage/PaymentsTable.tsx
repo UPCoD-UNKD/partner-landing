@@ -201,7 +201,7 @@
 
 
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import moreImg from 'shared/assets/img/PaymentTable/More.svg';
 import linkImg from 'shared/assets/img/PaymentTable/fi_link.svg';
 import summaImg from 'shared/assets/img/PaymentTable/fi_align-left.png';
@@ -257,7 +257,7 @@ const Button = styled.button`
   align-items: center;
 `;
 
-const StatusContainer = styled.span`
+const StatusContainer = styled.span<{ css: string | { background: string } }>`
   padding: 5px 10px;
   border-radius: 5px;
   color: white;
@@ -285,6 +285,14 @@ const getStatusStyles = (status: string) => {
     }
   };
 
+const Status = ({ status }: { status: string }) => {
+  const statusStyle = getStatusStyles(status);
+  return (
+    <StatusContainer css={statusStyle}>
+      {status}
+    </StatusContainer>
+  );
+};
 
 const data = [
   {
@@ -400,9 +408,7 @@ const PaymentsTable: React.FC = () => {
             <Td>{item.domain}</Td>
             <Td>{item.payoutAmount}</Td>
             <Td>
-            <StatusContainer css={css`${getStatusStyles(item.payoutStatus)}`}>
-                {item.payoutStatus}
-              </StatusContainer>
+              <Status status={item.payoutStatus} />
             </Td>
             <Td>{item.payoutDate}</Td>
             <Td>{item.payoutMethod}</Td>

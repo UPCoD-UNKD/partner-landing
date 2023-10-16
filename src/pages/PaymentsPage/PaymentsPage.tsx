@@ -1,6 +1,5 @@
 import { AttentionIcon, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from 'pages/Requisitespage/RequisitesStyles'
 import SideMenu from 'pages/Sidemenu/SideMenu'
-import React from 'react'
 import Navbar from 'shared/ui/navbar/Navbar'
 import { InputFieldSelect, InputFieldSelectStatus, InputsContainer, PaymentsContainer, PaymentsContent } from './PaymentStyles'
 import attention from 'shared/assets/img/requisites/attention.png'
