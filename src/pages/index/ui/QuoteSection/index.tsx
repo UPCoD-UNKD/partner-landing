@@ -1,31 +1,26 @@
 import { Container } from "shared/ui/page-layout/Container"
 import styled from "styled-components"
 import quoteIcon from 'shared/assets/img/quotes.svg'
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { UserCard } from "./UserCard";
 import { BlackSection } from "pages/index/LandingWrapper";
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+// const Inner = styled(Swiper)`
+// 	border: 3px solid rgba(247, 248, 250, 0.5);
+// 	padding: 2rem 3.125rem;
+// 	border-radius: 2rem;
 
-
-const Inner = styled(Swiper)`
-	border: 3px solid rgba(247, 248, 250, 0.5);
-	padding: 2rem 3.125rem;
-	border-radius: 2rem;
-
-	@media (max-width: 900px) {
-		padding: 1.625rem 2.75rem 0.8125rem;
-	}
-	@media (max-width: 500px) {
-		padding: 1rem 2rem 0.8125rem;
-	}
-
-`
+// 	@media (max-width: 900px) {
+// 		padding: 1.625rem 2.75rem 0.8125rem;
+// 	}
+// 	@media (max-width: 500px) {
+// 		padding: 1rem 2rem 0.8125rem;
+// 	}
+// `
 const QuoteWrapper = styled.div`
 	display: flex;
 	gap: 0.75rem;
-`
-const Slide = styled(SwiperSlide)`
-	
 `
 const QuoteIcon = styled.img.attrs({
 	src: quoteIcon
@@ -76,6 +71,14 @@ interface QuoteSectionProps {
 	}>
 }
 
+const Dot = styled.div<{ $isSelected?: boolean }>`
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+
+	background-color: ${props => props.$isSelected ? 'rgba(197, 255, 68, 1)' : 'rgba(226, 250, 173, 1)'};
+`
+
 export const QuoteSection = (props: QuoteSectionProps) => {
 	const {
 		title,
@@ -87,19 +90,20 @@ export const QuoteSection = (props: QuoteSectionProps) => {
 		<Container>
 			<BlackSection className={className} title={title} >
 				<Center>
-					<Inner>
+					<Carousel
+						infiniteLoop
+						renderItem={item => item}
+					>
 						{quotes.map(q => (
-							<Slide>
+							<div>
 								<QuoteWrapper>
 									<QuoteIcon />
 									<Quote>{q.quoteText}</Quote>
 								</QuoteWrapper>
-
 								<UserCard avatar={q.avatarURL} name={q.name} position={q.position} />
-
-							</Slide>
+							</div>
 						))}
-					</Inner>
+					</Carousel>
 				</Center>
 			</BlackSection>
 		</Container>

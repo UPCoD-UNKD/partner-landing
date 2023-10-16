@@ -20,8 +20,25 @@ const Inner = styled.div`
 
 const FlexWrapper = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+
+	margin-left: 5.1875rem;
+	margin-right: 5.1875rem;
+	@media (max-width: 900px) {
+		margin-left: 3.375rem;
+		margin-right: 3.375rem;
+	}
+	@media (max-width: 550px) {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	@media (max-width: 437px) {
+		margin-left: 0.7rem;
+		margin-right: 0.7rem;
+		flex-direction: column;
+		gap: 1rem;
+	}
 `
 
 export const EmailSection = () => {

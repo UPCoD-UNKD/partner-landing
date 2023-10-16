@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
 	@media (max-width: 945px) {
 		/* top: 9.5rem; */
+		gap: 0.6875rem;
 	}
 	
 	@media (max-width: 738px) {
