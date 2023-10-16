@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Title = styled.div`
 	color: rgba(32, 32, 32, 1);
-    border: 1px solid black;
     text-transform: uppercase;
     position: absolute;
     z-index: 2;
