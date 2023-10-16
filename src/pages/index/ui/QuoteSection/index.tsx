@@ -71,13 +71,13 @@ interface QuoteSectionProps {
 	}>
 }
 
-const Dot = styled.div<{ $isSelected?: boolean }>`
-	width: .5rem;
-	height: .5rem;
-	border-radius: 50%;
+// const Dot = styled.div<{ $isSelected?: boolean }>`
+// 	width: .5rem;
+// 	height: .5rem;
+// 	border-radius: 50%;
 
-	background-color: ${props => props.$isSelected ? 'rgba(197, 255, 68, 1)' : 'rgba(226, 250, 173, 1)'};
-`
+// 	background-color: ${props => props.$isSelected ? 'rgba(197, 255, 68, 1)' : 'rgba(226, 250, 173, 1)'};
+// `
 
 export const QuoteSection = (props: QuoteSectionProps) => {
 	const {
