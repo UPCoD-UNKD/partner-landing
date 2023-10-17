@@ -13,23 +13,14 @@ const Wrapper = styled.div`
 	border: 3px solid rgba(169, 207, 84, 1);
 	border-radius: 4.9375rem;
 	padding: 0.8125rem 1.3125rem;
-	margin-top: 2rem;
-
-	@media (max-width: 900px) {
-		margin-top: 1.25rem;
-	}
-	@media (max-width: 500px) {
-		margin-top: 1.25rem;
-	}
-	@media (max-width: 500px) {
-		margin-top: 1rem;
-	}
+	
 `
 const Avatar = styled.img`
+object-fit: cover;
 	width: 3.25rem;
 	height: 3.25rem;
 	border-radius: 50%;
-
+	flex: 1 1;
 `
 const Inner = styled.div`
 	

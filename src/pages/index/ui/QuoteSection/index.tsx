@@ -71,13 +71,64 @@ interface QuoteSectionProps {
 	}>
 }
 
-// const Dot = styled.div<{ $isSelected?: boolean }>`
-// 	width: .5rem;
-// 	height: .5rem;
-// 	border-radius: 50%;
+const Dot = styled.div<{ $isSelected?: boolean }>`
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
 
-// 	background-color: ${props => props.$isSelected ? 'rgba(197, 255, 68, 1)' : 'rgba(226, 250, 173, 1)'};
-// `
+	background-color: ${props => props.$isSelected ? 'rgba(197, 255, 68, 1)' : 'rgba(226, 250, 173, 1)'};
+`
+
+const StyledCarousel = styled(Carousel)`
+	border: 3px solid #8b8c8d;
+	padding: 2rem 1.125rem;
+	border-radius: 2rem;
+	& .carousel .slide img {
+		width: auto;
+	}
+	& .carousel.carousel-slider {
+		overflow: visible;
+	}
+	& .carousel.carousel-slider .control-dots {
+		bottom: -7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: .5rem;
+	}
+`
+
+const OtherAvatars = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& img {
+		margin-left: -0.5rem;
+		width: 3.6875rem;
+		height: 3.6875rem;
+		object-fit: cover;
+		border-radius: 50px;
+	}
+`
+
+const Inner = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+margin-top: 2rem;
+gap: 2rem;
+
+@media(max-width: 900px) {
+	margin-top: 1.25rem;
+}
+@media(max-width: 500px) {
+	margin-top: 1.25rem;
+}
+@media(max-width: 500px) {
+	margin-top: 1rem;
+}
+`
 
 export const QuoteSection = (props: QuoteSectionProps) => {
 	const {
@@ -88,24 +139,36 @@ export const QuoteSection = (props: QuoteSectionProps) => {
 
 	return (
 		<Container>
-			<BlackSection className={className} title={title} >
+			<BlackSection className={className} title={title}>
 				<Center>
-					<Carousel
+					<StyledCarousel
 						infiniteLoop
 						renderItem={item => item}
+						renderIndicator={(_, isSelected) => <Dot $isSelected={isSelected} />}
 					>
 						{quotes.map(q => (
 							<div>
-								<QuoteWrapper>
-									<QuoteIcon />
-									<Quote>{q.quoteText}</Quote>
-								</QuoteWrapper>
-								<UserCard avatar={q.avatarURL} name={q.name} position={q.position} />
+								<div>
+									<QuoteWrapper>
+										<QuoteIcon />
+										<Quote>{q.quoteText}</Quote>
+									</QuoteWrapper>
+									<Inner>
+										<UserCard avatar={q.avatarURL} name={q.name} position={q.position} />
+
+										<OtherAvatars>
+											{quotes
+												.filter(currentQ => currentQ.name !== q.name)
+												.map(q => <img src={q.avatarURL} />)
+											}
+										</OtherAvatars>
+									</Inner>
+								</div>
 							</div>
 						))}
-					</Carousel>
+					</StyledCarousel>
 				</Center>
 			</BlackSection>
-		</Container>
+		</Container >
 	)
 }

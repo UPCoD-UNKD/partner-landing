@@ -19,33 +19,43 @@ export default function IndexPage() {
 			<EmailSection />
 			<QuoteSection title='наші клієнти говорять' quotes={[
 				{
-					name: 'Igor Komendantov',
+					name: 'Lorem Ipsum',
 					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
 					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
 					position: 'Front-end developer'
 				},
 				{
-					name: 'Igor Komendantov',
+					name: 'Ipsum Lorem',
 					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
-					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
-					position: 'Front-end developer'
+					avatarURL: 'https://i.imgur.com/6yHmlwTb.jpg',
+					position: 'Backend-end developer'
+				},
+				{
+					name: 'Place holder',
+					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
+					avatarURL: 'https://i.imgur.com/zfnWyXVb.jpg',
+					position: 'QA'
 				},
 			]} />
 			<MarginedQuoteSection title='Наші бізнес партнери говорять' quotes={[
 				{
-					name: 'Igor Komendantov',
+					name: 'Lorem Ipsum',
 					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
 					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
 					position: 'Front-end developer'
 				},
 				{
-					name: 'Igor Komendantov',
+					name: 'Ipsum Lorem',
 					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
-					avatarURL: 'https://cdn-icons-png.flaticon.com/128/149/149071.png',
-					position: 'Front-end developer'
+					avatarURL: 'https://i.imgur.com/6yHmlwTb.jpg',
+					position: 'Backend-end developer'
 				},
-
-
+				{
+					name: 'Place holder',
+					quoteText: 'З партнерською програмою я отримую знижки та пропозиції, які мені допомагають набувати бажаного майже за собівартістю, без накруток.',
+					avatarURL: 'https://i.imgur.com/zfnWyXVb.jpg',
+					position: 'QA'
+				},
 			]} />
 			<Offer />
 			<HowItWorks steps={[
