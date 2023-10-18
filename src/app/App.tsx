@@ -1,6 +1,6 @@
 
 import AffiliatePage from "pages/AffiliatePage/AffiliatePage";
-import PaymentsPage from "pages/PaymentsPage/PaymentsPage";
+// import PaymentsPage from "pages/PaymentsPage/PaymentsPage";
 // import OverviewPage from "pages/Overviewpage/OverviewPage";
 // import RegistrationPage from "pages/Registrationpage/RegistrationPage";
 // import RequisitesPage from "pages/Requisitespage/RequisitesPage";

@@ -1,4 +1,3 @@
-import React from 'react'
 import { AffHeader, AffiliatePageBodyPageBody, AffiliatePageContent, AfilliatePageContainer, GeneratedLink, GeneratedLinkHeader, GeneratedLinkHelperText } from './AffiliatePageStyles'
 import SideMenu from 'pages/Sidemenu/SideMenu'
 import { AttentionIcon, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from 'pages/Requisitespage/RequisitesStyles'

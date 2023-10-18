@@ -27,13 +27,13 @@ interface CopyLinkInputProps {
 const GeneratedLinkInput: React.FC<CopyLinkInputProps> = ({ link }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const copyToClipboard = () => {
-    if (inputRef.current) {
-      inputRef.current.select();
-      document.execCommand('copy');
-      // You can also provide a visual indication or a message that the link has been copied
-    }
-  };
+//   const copyToClipboard = () => {
+//     if (inputRef.current) {
+//       inputRef.current.select();
+//       document.execCommand('copy');
+//       // You can also provide a visual indication or a message that the link has been copied
+//     }
+//   };
 
   return (
     <InputWrapper>
