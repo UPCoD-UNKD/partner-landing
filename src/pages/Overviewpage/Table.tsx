@@ -40,7 +40,6 @@ const TableHeader = styled.h2 `
 const TableExtraText = styled.p `
     color: #646464;
     font-size: 9.53px;
-    font-family: Fontin Sans CR;
     font-weight: 400;
     text-transform: lowercase;
     display: flex;
@@ -55,10 +54,10 @@ const TableDates = styled.div `
 const TableCellDate = styled.td `
     height: 10px;
     color: #646464;
-font-size: 6.37px;
-font-weight: 400;
-background: transparent;
-padding: 9.37px;
+    font-size: 6.37px;
+    font-weight: 400;
+    background: transparent;
+    padding: 9.37px;
 `
 
 const generateTable = (rows: number, columns: number) => {

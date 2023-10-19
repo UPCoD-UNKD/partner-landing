@@ -26,38 +26,27 @@ const SideMenu = () => {
                     Реквізити
                     <BankImg src={bankImg} alt="" />
                 </StyledLink>
-                
-
-
-                
+           
                 <StyledLink to="/overview">
                     Зведення
                     <GraphicImg src={graphicImg} alt="" />
                 </StyledLink>
 
-
-                
                 <StyledLink to="/clients">
                     Клієнти
                     <ClientsImg src={clientsImg} alt="" />
                 </StyledLink>
-                
 
-
-                
                 <StyledLink to="/payments">
                     Платежі
                     <ArrowsImg src={arrowsImg} alt="" />
                 </StyledLink>
-                
-
-               
+          
                 <StyledLinkBorder to="/affiliate">
                     Партнерське посилання
                     <PartnerImg src={partnerImg} alt="" />
                 </StyledLinkBorder>
                
-
                 <StyledLink to="/links">
                     Керування посиланнями
                     <LinksImg src={linksImg} alt="" />

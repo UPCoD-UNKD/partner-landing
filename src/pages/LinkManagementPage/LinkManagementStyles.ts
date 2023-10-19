@@ -18,7 +18,6 @@ export const LinkManagementHeader = styled.div `
     margin-left: 111px;
     color: #5C624F;
     font-size: 22px;
-    font-family: Fontin Sans CR;
     font-weight: 700;
 `
 
@@ -28,6 +27,5 @@ export const HeaderBtn = styled.button `
     border-radius: 22.78px;
     color: #25281E;
     font-size: 14px;
-    font-family: Fontin Sans CR;
     font-weight: 700;
 `

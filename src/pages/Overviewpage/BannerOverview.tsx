@@ -30,7 +30,6 @@ const TableHeading = styled.h2 `
 const TableBody = styled.p `
     color: #669005;
     font-size: 24px;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 0.24px;
     margin-top: 10px;
@@ -40,7 +39,6 @@ const TableBody = styled.p `
 const TableBodyLinks = styled.p `
     color: #3A6597;
     font-size: 24px;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 0.24px;
     margin-top: 10px;
@@ -64,7 +62,6 @@ const TextHelper = styled.p `
 const MainText = styled.p `
     color: #202020;
     font-size: 19.46px;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 0.19px;
     display: flex;
@@ -74,7 +71,6 @@ const MainText = styled.p `
 const TableBodyClients= styled.div `
       color: #3A6597;
     font-size: 24px;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 0.24px;
     margin-top: 10px;
@@ -83,7 +79,6 @@ const TableBodyClients= styled.div `
 const LowerText = styled.p `
     color: #202020;
     font-size: 11.12px;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 0.44px;
     margin-top: 7px;
@@ -91,8 +86,7 @@ const LowerText = styled.p `
 `
 const TableFooterClients = styled.div`
     color: #202020;
-    font-size: 8.72px;
-    font-family: Fontin Sans CR;
+    font-size: 10.72px;
     font-weight: 400;
     line-height: 10.47px;
     letter-spacing: 0.17px;

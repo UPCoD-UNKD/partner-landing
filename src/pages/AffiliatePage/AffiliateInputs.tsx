@@ -25,7 +25,6 @@ const Input = styled.input`
     border-radius: 5px;
     color: #8E8D8D;
     font-size: 12px;
-    font-family: Fontin Sans CR;
     margin-top: 5px;
 `;
 
@@ -37,14 +36,12 @@ const Select = styled.select`
     border-radius: 5px;
     color: #8E8D8D;
     font-size: 12px;
-    font-family: Fontin Sans CR;
     margin-top: 5px;
 `;
 
 const Button = styled.button`
     color: #25281E;
     font-size: 16px;
-    font-family: Fontin Sans CR;
     font-weight: 700;
     cursor: pointer;
     background: #A9CF54; 

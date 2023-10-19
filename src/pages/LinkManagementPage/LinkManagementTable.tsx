@@ -21,7 +21,6 @@ const TableHeaderCell = styled.th`
     cursor: pointer;
     color: #25281E;
     font-size: 14.72px;
-    font-family: Fontin Sans CR;
     font-weight: 700;
     text-align: left;
     background: #F7F8FA;
@@ -34,7 +33,6 @@ const TableCell = styled.td`
     cursor: pointer;
     color: #222222;
     font-size: 13.45px;
-    font-family: Fontin Sans CR;
     font-weight: 400;
     text-align: left;
 `;

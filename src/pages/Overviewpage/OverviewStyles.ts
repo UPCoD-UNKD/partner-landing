@@ -59,7 +59,6 @@ export const MainIndicatorsTable = styled.div `
 export const Header = styled.h2 `
     color: #202020;
     font-size: 18px;
-    font-family: Fontin Sans CR;
     font-weight: bold;
     letter-spacing: 0.18px;
 `
@@ -75,7 +74,6 @@ export const IndicatorItem = styled.div `
     align-items: center;
     color: #4F5154;
     font-size: 10.07px;
-    font-family: Fontin Sans CR;
     font-weight: bold;
     line-height: 12.59px;
     margin-top: 1.7px;
@@ -90,7 +88,6 @@ export const IndicatorItems = styled.div `
 export const UnderlineText = styled.p `
     color: #5C624F;
     font-size: 10.07px;
-    font-family: Fontin Sans CR;
     font-weight: 700;
     text-decoration: underline;
     line-height: 12.59px;

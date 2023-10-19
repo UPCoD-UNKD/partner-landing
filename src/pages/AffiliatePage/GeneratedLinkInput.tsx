@@ -14,7 +14,6 @@ const CopyInput = styled.input`
   flex: 1;
   color: #25281E;
     font-size: 14px;
-    font-family: Fontin Sans CR;
     padding: 11px 10px;
     background: #F7F8FA; border-radius: 5px;
 `;

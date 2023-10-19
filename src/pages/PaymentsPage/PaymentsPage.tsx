@@ -1,52 +1,3 @@
-// import SideMenu from 'pages/Sidemenu/SideMenu'
-// import Navbar from 'shared/ui/navbar/Navbar'
-// import { InputFieldSelect, InputFieldSelectStatus, InputsContainer, PaymentsContainer, PaymentsContent } from './PaymentStyles'
-// import PaymentsTable from './PaymentsTable'
-// import WarningTable from 'shared/ui/warningtable/WarningTable'
-// import { useState } from 'react'
-
-
-// const PaymentsPage = () => {
-//     const [selectedStatus, setSelectedStatus] = useState(''); 
-
-//     const handleStatusChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-//         setSelectedStatus(event.target.value);
-//       };
-//       const data = [
-//        'Виплачено',
-//        'Відхилено',
-//        'В процесі'
-//       ];
-//   return (
-//     <div>
-//         <Navbar />
-//         <PaymentsContainer>
-//             <SideMenu />
-//             <PaymentsContent>
-//                 <WarningTable />
-//                 <InputsContainer>
-//                     <InputFieldSelect id="input2">
-//                                 <option value="option1">Останні 30 днів</option>
-//                                 <option value="option2">Останні 40 днів</option>
-//                                 <option value="option3">Останні 50 днів</option>
-//                                 <option value="option4">Останні 60 днів</option>
-//                     </InputFieldSelect>
-//                     <InputFieldSelectStatus id="input2" onChange={handleStatusChange}>
-//                                 <option value="">Статус</option>
-//                                 <option value="Виплачено">Виплачено</option>
-//                                 <option value="Відхилено">Відхилено</option>
-//                                 <option value="В процесі">В процесі</option>
-//                     </InputFieldSelectStatus >
-//                 </InputsContainer>
-//                 <PaymentsTable data={data} selectedStatus={selectedStatus} />
-//             </PaymentsContent>
-//         </PaymentsContainer>
-//     </div>
-//   )
-// }
-
-// export default PaymentsPage
-
 import Navbar from 'shared/ui/navbar/Navbar';
 import SideMenu from 'pages/Sidemenu/SideMenu';
 import WarningTable from 'shared/ui/warningtable/WarningTable';
@@ -123,7 +74,6 @@ const PaymentsPage = () => {
         <SideMenu />
         <PaymentsContent>
           <WarningTable />
-          
           <PaymentsTable data={paymentData} />
         </PaymentsContent>
       </PaymentsContainer>

@@ -26,14 +26,12 @@ const BtnClose = styled.button `
 const ModalHeaderTitle = styled.h2 `
     color: #242424;
 font-size: 16px;
-font-family: Fontin Sans CR;
 font-weight: 700;
 line-height: 35px;
 `
 const ModalDate = styled.p `
     color: #242424;
 font-size: 12px;
-font-family: Poppins;
 font-weight: 400;
 line-height: 10px;
 margin-top: 14px;
@@ -42,7 +40,6 @@ margin-top: 14px;
 const Number = styled.p `
     color: #242424;
 font-size: 14px;
-font-family: Poppins;
 font-weight: 700;
 line-height: 7.20px;
 margin-top: 5px;
