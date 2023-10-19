@@ -67,9 +67,8 @@ const ClientsTable = ({ data }: { data: TableData[] }) => {
     setFilteredData(filtered);
   };
 
-  // Вызов функции фильтрации, когда data изменяется
   useEffect(() => {
-    filterData({ status: 'all' }); // Измените параметры фильтрации по умолчанию здесь
+    filterData({ status: 'all' }); 
   }, [data]);
 
   
