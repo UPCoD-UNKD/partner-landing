@@ -1,8 +1,9 @@
 import SideMenu from 'pages/Sidemenu/SideMenu'
 import Navbar from 'shared/ui/navbar/Navbar'
-import { AttentionIcon, PageDiv, RequisitesPageContainer, SaveButton, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from './RequisitesStyles'
-import attention from 'shared/assets/img/requisites/attention.png'
+import {  PageDiv, RequisitesPageContainer, SaveButton } from './RequisitesStyles'
+
 import RequisitesTable from './RequisitesTable'
+import WarningTable from 'shared/ui/warningtable/WarningTable'
 const RequisitesPage = () => {
   return (
     <div>
@@ -10,15 +11,7 @@ const RequisitesPage = () => {
         <RequisitesPageContainer>
             <SideMenu />
             <PageDiv>
-            <WarningTable>
-                <WarningTableContainer>
-                    <AttentionIcon src={attention} alt="" />
-                    <WarningTableText>
-                        <WarningTableHeader>Активація аккаунта</WarningTableHeader>
-                        <WarningTableBody>Ваш обліковий запис готовий до роботи! Для виведення винагороди Вам необхідно заповнити реквізити та активувати обліковий запис.</WarningTableBody>
-                    </WarningTableText>
-                </WarningTableContainer>
-            </WarningTable>
+                <WarningTable/>
             <RequisitesTable />
             <SaveButton>
                 Зберегти реквізити

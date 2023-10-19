@@ -1,3 +1,4 @@
+import {  NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -8,6 +9,7 @@ export const SideMenuContainer = styled.div `
     background: #202020;
 
 `
+
 
 
 export const MenuList = styled.ul `
@@ -34,28 +36,52 @@ export const MenuListItem = styled.li `
         background: #E2FAAD;
         color: #5C624F;
     }
+  
 `
 
-
-export const MenuListItemBorder = styled.li `
-    color: #F7F8FA;
+export const StyledLink = styled(NavLink)`
+        text-decoration: none;
+        color: #F7F8FA;
+        font-size: 16px; 
+        color: #F7F8FA;
     font-size: 14px;
     font-weight: 700;
     width: 312px;
     height: 45px;
-    padding: 25px 30px;
+    padding: 25px 30px 25px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px silver solid;
-    text-align: center;
     align-items: center;
     cursor: pointer;
-     &:hover {
+    &:hover {
         background: #E2FAAD;
         color: #5C624F;
     }
 `
+export const StyledLinkBorder = styled(NavLink) `
+          text-decoration: none;
+        color: #F7F8FA;
+        font-size: 16px; 
+        color: #F7F8FA;
+    font-size: 14px;
+    font-weight: 700;
+    width: 312px;
+    height: 45px;
+    padding: 25px 30px 25px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px silver solid;
+    &:hover {
+        background: #E2FAAD;
+        color: #5C624F;
+    }
+`
+
+
 
 
 export const BankImg = styled.img `

@@ -1,9 +1,8 @@
-import { AttentionIcon, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from 'pages/Requisitespage/RequisitesStyles'
 import SideMenu from 'pages/Sidemenu/SideMenu'
 import Navbar from 'shared/ui/navbar/Navbar'
 import { InputFieldSelect, InputFieldSelectStatus, InputsContainer, PaymentsContainer, PaymentsContent } from './PaymentStyles'
-import attention from 'shared/assets/img/requisites/attention.png'
 import PaymentsTable from './PaymentsTable'
+import WarningTable from 'shared/ui/warningtable/WarningTable'
 
 
 const PaymentsPage = () => {
@@ -13,15 +12,7 @@ const PaymentsPage = () => {
         <PaymentsContainer>
             <SideMenu />
             <PaymentsContent>
-                <WarningTable>
-                <WarningTableContainer>
-                        <AttentionIcon src={attention} alt="" />
-                        <WarningTableText>
-                            <WarningTableHeader>Активація аккаунта</WarningTableHeader>
-                            <WarningTableBody>Ваш обліковий запис готовий до роботи! Для виведення винагороди Вам необхідно заповнити реквізити та активувати обліковий запис.</WarningTableBody>
-                        </WarningTableText>
-                    </WarningTableContainer>
-                </WarningTable>
+                <WarningTable />
                 <InputsContainer>
                     <InputFieldSelect id="input2">
                                 <option value="option1">Останні 30 днів</option>

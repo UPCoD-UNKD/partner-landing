@@ -1,10 +1,9 @@
 import { AffHeader, AffiliatePageBodyPageBody, AffiliatePageContent, AfilliatePageContainer, GeneratedLink, GeneratedLinkHeader, GeneratedLinkHelperText } from './AffiliatePageStyles'
 import SideMenu from 'pages/Sidemenu/SideMenu'
-import { AttentionIcon, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from 'pages/Requisitespage/RequisitesStyles'
-import attention from 'shared/assets/img/requisites/attention.png'
 import Navbar from 'shared/ui/navbar/Navbar'
 import AffiliateInputs from './AffiliateInputs'
 import GeneratedLinkInput from './GeneratedLinkInput'
+import WarningTable from 'shared/ui/warningtable/WarningTable'
 
 
 const AffiliatePage = () => {
@@ -14,15 +13,7 @@ const AffiliatePage = () => {
             <AfilliatePageContainer>
                 <SideMenu />
                 <AffiliatePageBodyPageBody>
-                    <WarningTable>
-                        <WarningTableContainer>
-                            <AttentionIcon src={attention} alt="" />
-                            <WarningTableText>
-                                <WarningTableHeader>Активація аккаунта</WarningTableHeader>
-                                <WarningTableBody>Ваш обліковий запис готовий до роботи! Для виведення винагороди Вам необхідно заповнити реквізити та активувати обліковий запис.</WarningTableBody>
-                            </WarningTableText>
-                        </WarningTableContainer>
-                    </WarningTable>
+                    <WarningTable />
                     <AffiliatePageContent>
                         <AffHeader> Створення партнерського посилання</AffHeader>
                         <AffiliateInputs />

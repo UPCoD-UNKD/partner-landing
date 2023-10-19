@@ -1,10 +1,9 @@
-import { AttentionIcon, WarningTable, WarningTableBody, WarningTableContainer, WarningTableHeader, WarningTableText } from 'pages/Requisitespage/RequisitesStyles'
 import SideMenu from 'pages/Sidemenu/SideMenu'
-import attention from 'shared/assets/img/requisites/attention.png'
 import Navbar from 'shared/ui/navbar/Navbar'
 import { Header, HeaderExtraDiv, IndicatorItem, IndicatorItems, InputFieldSelect, MainIndicatorsTable, OverviewContainer, OverviewContent, OverviewHeader, UnderlineText } from './OverviewStyles'
 import BannerOverview from './BannerOverview'
 import Table from './Table'
+import WarningTable from 'shared/ui/warningtable/WarningTable'
 
 
 
@@ -16,15 +15,7 @@ const OverviewPage = () => {
         <OverviewContainer>
             <SideMenu />
             <OverviewContent>
-                <WarningTable>
-                <WarningTableContainer>
-                        <AttentionIcon src={attention} alt="" />
-                        <WarningTableText>
-                            <WarningTableHeader>Активація аккаунта</WarningTableHeader>
-                            <WarningTableBody>Ваш обліковий запис готовий до роботи! Для виведення винагороди Вам необхідно заповнити реквізити та активувати обліковий запис.</WarningTableBody>
-                        </WarningTableText>
-                    </WarningTableContainer>
-                </WarningTable>
+                <WarningTable />
                 <OverviewHeader>
                     Перегляд статистики - Головне 
                     
