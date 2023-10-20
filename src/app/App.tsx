@@ -9,6 +9,8 @@ import ClientsPage from "pages/ClientsPage/ClientsPage";
 import { Route, Routes } from "react-router-dom";
 import LinkManagementPage from "pages/LinkManagementPage/LinkManagementPage";
 import ApiPage from "pages/APIPage/ApiPage";
+import CreateTeam from "pages/CreateTeamPage/CreateTeam";
+import ChooseMember from "pages/CreateTeamPage/ChooseMember";
 // import IndexPage from "pages/index";
 
 
@@ -25,6 +27,8 @@ function App() {
       <Route element={<AffiliatePage />} path="/affiliate" />
       <Route element={<LinkManagementPage />} path="/links" />
       <Route element={<ApiPage />} path="/api" />
+      <Route element={<CreateTeam />} path="/team" />
+      <Route element={<ChooseMember />} path="/addmember" />
     </Routes>
   </>
   );

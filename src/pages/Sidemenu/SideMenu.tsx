@@ -20,8 +20,6 @@ const SideMenu = () => {
 
     <SideMenuContainer>
         <MenuList>
-           
-                 
                 <StyledLink to="/">
                     Реквізити
                     <BankImg src={bankImg} alt="" />
