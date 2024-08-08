@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+
+  margin-top: 7%;
+  margin-bottom: 40px;
+
+  & img {
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  @media (max-width: 767.98px) {
+    margin-top: 3%;
+  }
+}

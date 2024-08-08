@@ -1,0 +1,144 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  color: #8e8d8d;
+
+  &_input {
+    display: flex;
+    column-gap: 15px;
+    overflow: hidden;
+
+    outline: 1px solid #d8d8d7;
+    border-radius: 6px;
+    background-color: #fff;
+
+    padding: 9px 18px 9px 20px;
+
+    &:first-child {
+      margin-bottom: 15px;
+    }
+
+    & input {
+      width: 100%;
+
+      border: none;
+      border-radius: 5px;
+
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &,
+      &::placeholder {
+        color: #8e8d8d;
+      }
+    }
+
+    & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: none;
+      border: none;
+
+      cursor: pointer;
+    }
+  }
+
+  &_checkbox {
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #a1a19f;
+
+    position: relative;
+
+    & input {
+      width: 17px;
+      height: 17px;
+
+      opacity: 0;
+
+      position: absolute;
+      left: -4px;
+      z-index: 2;
+      
+      cursor: pointer;
+    }
+
+    & input:checked + &-span::before {
+      opacity: 1;
+    }
+
+    &-span {
+      display: block;
+      position: relative;
+
+      margin-right: 10px;
+
+      border: 1px solid #d8d8d7;
+      border-radius: 3px;
+      background-color: #fff;
+
+      width: 18px;
+      height: 18px;
+
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        display: block;
+
+        width: 5px;
+        height: 10px;
+
+        position: absolute;
+        top: calc(50% - 7.5px);
+        left: calc(50% - 3.5px);
+
+        transform: rotate(45deg);
+
+        border-bottom: 2px solid #96b515;
+        border-right: 2px solid #96b515;
+
+        opacity: 0;
+        transition: all 0.2s;
+      }
+    }
+
+    & p {
+      span {
+        color: #5c624f;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 429.98px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &_tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    margin: 0 auto;
+
+    max-width: 238px;
+
+    & a {
+      text-decoration: underline;
+      color: #5c624f;
+      font-size: 14px;
+    }
+  }
+}
